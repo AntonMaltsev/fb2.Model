@@ -1,28 +1,29 @@
-namespace fb2.Model
+namespace fb2.Model.Formating
 {
     using System.Xml.Schema;
     using System.Xml.Serialization;
 
+    using fb2.Model.Base;
     using fb2.Model.Data;
-    using fb2.Model.Formating;
+    using fb2.Model.Enum;
 
     /// <summary>
-    ///     The fiction book body.
+    ///     The named style type.
     /// </summary>
     /// <remarks>
     /// </remarks>
-    [XmlType(AnonymousType = true, Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0")]
-    public class FictionBookBody
+    [XmlType(Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0")]
+    public class NamedStyleType : BaseFormatingStyle
     {
         /// <summary>
-        ///     The epigraph field.
+        ///     The items element name field.
         /// </summary>
-        private EpigraphType[] epigraphField;
+        private StyleSupportedEnum[] itemsElementNameField;
 
         /// <summary>
-        ///     The image field.
+        ///     The items field.
         /// </summary>
-        private ImageType imageField;
+        private BaseFormatingStyle[] itemsField;
 
         /// <summary>
         ///     The lang field.
@@ -35,105 +36,70 @@ namespace fb2.Model
         private string nameField;
 
         /// <summary>
-        ///     The section field.
+        ///     The text field.
         /// </summary>
-        private SectionType[] sectionField;
+        private string textField;
 
         /// <summary>
-        ///     The title field.
-        /// </summary>
-        private TitleType titleField;
-
-        /// <summary>
-        ///     The image.
+        ///     The items.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        public ImageType image
+        [XmlElement("a", typeof(LinkType))]
+        [XmlElement("emphasis", typeof(StyleType))]
+        [XmlElement("image", typeof(ImageType))]
+        [XmlElement("strong", typeof(StyleType))]
+        [XmlElement("style", typeof(NamedStyleType))]
+        [XmlChoiceIdentifier("ItemsElementName")]
+        public BaseFormatingStyle[] Items
         {
             get
             {
-                return this.imageField;
+                return this.itemsField;
             }
 
             set
             {
-                this.imageField = value;
+                this.itemsField = value;
             }
         }
 
         /// <summary>
-        ///     The title.
+        ///     The items element name.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        public TitleType title
+        [XmlElement("ItemsElementName")]
+        [XmlIgnore]
+        public StyleSupportedEnum[] ItemsElementName
         {
             get
             {
-                return this.titleField;
+                return this.itemsElementNameField;
             }
 
             set
             {
-                this.titleField = value;
+                this.itemsElementNameField = value;
             }
         }
 
         /// <summary>
-        ///     The epigraph.
+        ///     The text.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        [XmlElement("epigraph")]
-        public EpigraphType[] epigraph
+        [XmlText]
+        public string Text
         {
             get
             {
-                return this.epigraphField;
+                return this.textField;
             }
 
             set
             {
-                this.epigraphField = value;
-            }
-        }
-
-        /// <summary>
-        ///     The section.
-        /// </summary>
-        /// <remarks>
-        /// </remarks>
-        [XmlElement("section")]
-        public SectionType[] section
-        {
-            get
-            {
-                return this.sectionField;
-            }
-
-            set
-            {
-                this.sectionField = value;
-            }
-        }
-
-        /// <summary>
-        ///     The name.
-        /// </summary>
-        /// <remarks>
-        /// </remarks>
-        [XmlAttribute]
-        public string name
-        {
-            get
-            {
-                return this.nameField;
-            }
-
-            set
-            {
-                this.nameField = value;
+                this.textField = value;
             }
         }
 
@@ -153,6 +119,25 @@ namespace fb2.Model
             set
             {
                 this.langField = value;
+            }
+        }
+
+        /// <summary>
+        ///     The name.
+        /// </summary>
+        /// <remarks>
+        /// </remarks>
+        [XmlAttribute(DataType = "token")]
+        public string name
+        {
+            get
+            {
+                return this.nameField;
+            }
+
+            set
+            {
+                this.nameField = value;
             }
         }
     }

@@ -17,6 +17,7 @@ using System.Xml.Serialization;
 
 namespace fb2.Model
 {
+    using fb2.Model.Data;
     using fb2.Model.Description;
 
     [XmlType(AnonymousType=true, Namespace="http://www.gribuser.ru/xml/fictionbook/2.0")]

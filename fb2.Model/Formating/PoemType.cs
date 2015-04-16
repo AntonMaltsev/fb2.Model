@@ -1,28 +1,33 @@
-namespace fb2.Model
+namespace fb2.Model.Formating
 {
     using System.Xml.Schema;
     using System.Xml.Serialization;
 
+    using fb2.Model.Base;
     using fb2.Model.Data;
-    using fb2.Model.Formating;
 
     /// <summary>
-    ///     The fiction book body.
+    ///     The poem type.
     /// </summary>
     /// <remarks>
     /// </remarks>
-    [XmlType(AnonymousType = true, Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0")]
-    public class FictionBookBody
+    [XmlType(Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0")]
+    public class PoemType : BaseFormatingStyle
     {
+        /// <summary>
+        ///     The date field.
+        /// </summary>
+        private DateType dateField;
+
         /// <summary>
         ///     The epigraph field.
         /// </summary>
         private EpigraphType[] epigraphField;
 
         /// <summary>
-        ///     The image field.
+        ///     The id field.
         /// </summary>
-        private ImageType imageField;
+        private string idField;
 
         /// <summary>
         ///     The lang field.
@@ -30,37 +35,19 @@ namespace fb2.Model
         private string langField;
 
         /// <summary>
-        ///     The name field.
+        ///     The stanza field.
         /// </summary>
-        private string nameField;
+        private PoemTypeStanza[] stanzaField;
 
         /// <summary>
-        ///     The section field.
+        ///     The textauthor field.
         /// </summary>
-        private SectionType[] sectionField;
+        private TextFieldType[] textauthorField;
 
         /// <summary>
         ///     The title field.
         /// </summary>
         private TitleType titleField;
-
-        /// <summary>
-        ///     The image.
-        /// </summary>
-        /// <remarks>
-        /// </remarks>
-        public ImageType image
-        {
-            get
-            {
-                return this.imageField;
-            }
-
-            set
-            {
-                this.imageField = value;
-            }
-        }
 
         /// <summary>
         ///     The title.
@@ -100,40 +87,77 @@ namespace fb2.Model
         }
 
         /// <summary>
-        ///     The section.
+        ///     The stanza.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        [XmlElement("section")]
-        public SectionType[] section
+        [XmlElement("stanza")]
+        public PoemTypeStanza[] stanza
         {
             get
             {
-                return this.sectionField;
+                return this.stanzaField;
             }
 
             set
             {
-                this.sectionField = value;
+                this.stanzaField = value;
             }
         }
 
         /// <summary>
-        ///     The name.
+        ///     The textauthor.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        [XmlAttribute]
-        public string name
+        [XmlElement("text-author")]
+        public TextFieldType[] textauthor
         {
             get
             {
-                return this.nameField;
+                return this.textauthorField;
             }
 
             set
             {
-                this.nameField = value;
+                this.textauthorField = value;
+            }
+        }
+
+        /// <summary>
+        ///     The date.
+        /// </summary>
+        /// <remarks>
+        /// </remarks>
+        public DateType date
+        {
+            get
+            {
+                return this.dateField;
+            }
+
+            set
+            {
+                this.dateField = value;
+            }
+        }
+
+        /// <summary>
+        ///     The id.
+        /// </summary>
+        /// <remarks>
+        /// </remarks>
+        [XmlAttribute(DataType = "ID")]
+        public string id
+        {
+            get
+            {
+                return this.idField;
+            }
+
+            set
+            {
+                this.idField = value;
             }
         }
 

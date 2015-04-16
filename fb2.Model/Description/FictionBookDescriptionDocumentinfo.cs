@@ -2,8 +2,8 @@ namespace fb2.Model.Description
 {
     using System.Xml.Serialization;
 
-    using fb2.Model.Types;
-    using fb2.Model.Types.Data;
+    using fb2.Model.Data;
+    using fb2.Model.Formating;
 
     /// <summary>
     ///     The fiction book description documentinfo.

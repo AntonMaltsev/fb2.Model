@@ -1,43 +1,25 @@
-namespace fb2.Model
+namespace fb2.Model.Formating
 {
     using System.Xml.Schema;
     using System.Xml.Serialization;
 
-    using fb2.Model.Data;
-    using fb2.Model.Formating;
-
     /// <summary>
-    ///     The fiction book body.
+    ///     The poem type stanza.
     /// </summary>
     /// <remarks>
     /// </remarks>
     [XmlType(AnonymousType = true, Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0")]
-    public class FictionBookBody
+    public class PoemTypeStanza
     {
-        /// <summary>
-        ///     The epigraph field.
-        /// </summary>
-        private EpigraphType[] epigraphField;
-
-        /// <summary>
-        ///     The image field.
-        /// </summary>
-        private ImageType imageField;
-
         /// <summary>
         ///     The lang field.
         /// </summary>
         private string langField;
 
         /// <summary>
-        ///     The name field.
+        ///     The subtitle field.
         /// </summary>
-        private string nameField;
-
-        /// <summary>
-        ///     The section field.
-        /// </summary>
-        private SectionType[] sectionField;
+        private PType subtitleField;
 
         /// <summary>
         ///     The title field.
@@ -45,22 +27,9 @@ namespace fb2.Model
         private TitleType titleField;
 
         /// <summary>
-        ///     The image.
+        ///     The v field.
         /// </summary>
-        /// <remarks>
-        /// </remarks>
-        public ImageType image
-        {
-            get
-            {
-                return this.imageField;
-            }
-
-            set
-            {
-                this.imageField = value;
-            }
-        }
+        private PType[] vField;
 
         /// <summary>
         ///     The title.
@@ -81,59 +50,39 @@ namespace fb2.Model
         }
 
         /// <summary>
-        ///     The epigraph.
+        ///     The subtitle.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        [XmlElement("epigraph")]
-        public EpigraphType[] epigraph
+        public PType subtitle
         {
             get
             {
-                return this.epigraphField;
+                return this.subtitleField;
             }
 
             set
             {
-                this.epigraphField = value;
+                this.subtitleField = value;
             }
         }
 
         /// <summary>
-        ///     The section.
+        ///     The v.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        [XmlElement("section")]
-        public SectionType[] section
+        [XmlElement("v")]
+        public PType[] v
         {
             get
             {
-                return this.sectionField;
+                return this.vField;
             }
 
             set
             {
-                this.sectionField = value;
-            }
-        }
-
-        /// <summary>
-        ///     The name.
-        /// </summary>
-        /// <remarks>
-        /// </remarks>
-        [XmlAttribute]
-        public string name
-        {
-            get
-            {
-                return this.nameField;
-            }
-
-            set
-            {
-                this.nameField = value;
+                this.vField = value;
             }
         }
 

@@ -23,7 +23,10 @@
             var book =
                 Deserialize<FictionBook>(
                     @"C:\Users\fenri_000\Desktop\Игры\ФБ\Kamenistyiyi_A._Rayibesposhadnyiyi1._Rayi_Besposhadnyiyi.fb2");
-            Console.WriteLine(book.description.titleinfo.booktitle);
+            var titleInfo = book.description.titleinfo;
+            Console.WriteLine(titleInfo.booktitle);
+            Console.WriteLine(titleInfo.author[0].Items[0] + " " + titleInfo.author[0].Items[1]);
+            Console.WriteLine(titleInfo.date.value);
             Console.ReadKey();
         }
 

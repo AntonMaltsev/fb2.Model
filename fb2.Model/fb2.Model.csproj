@@ -53,7 +53,7 @@
     <Compile Include="Description\FictionBookDescriptionPublishinfo.cs" />
     <Compile Include="Description\FictionBookDescriptionTitleinfo.cs" />
     <Compile Include="Data\FictionBookDescriptionTitleinfoGenre.cs" />
-    <Compile Include="Data\FictionBookStylesheet.cs" />
+    <Compile Include="FictionBookStylesheet.cs" />
     <Compile Include="Enum\GenreType.cs" />
     <Compile Include="Data\ImageType.cs" />
     <Compile Include="Enum\AuthorSupportedEnum.cs" />

@@ -1,4 +1,4 @@
-namespace fb2.Model.Data
+namespace fb2.Model
 {
     using System.Xml.Serialization;
 

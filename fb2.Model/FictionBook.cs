@@ -23,56 +23,20 @@ namespace fb2.Model
     [XmlType(AnonymousType=true, Namespace="http://www.gribuser.ru/xml/fictionbook/2.0")]
     [XmlRoot(Namespace="http://www.gribuser.ru/xml/fictionbook/2.0", IsNullable=false)]
     public class FictionBook {
-    
-        private FictionBookStylesheet[] stylesheetField;
-    
-        private FictionBookDescription descriptionField;
-    
-        private FictionBookBody[] bodyField;
-    
-        private FictionBookBinary[] binaryField;
-    
         /// <remarks/>
         [XmlElement("stylesheet")]
-        public FictionBookStylesheet[] stylesheet {
-            get {
-                return this.stylesheetField;
-            }
-            set {
-                this.stylesheetField = value;
-            }
-        }
-    
+        public FictionBookStylesheet[] stylesheet { get; set; }
+
         /// <remarks/>
-        public FictionBookDescription description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-    
+        [XmlElement("description")]
+        public FictionBookDescription description { get; set; }
+
         /// <remarks/>
         [XmlElement("body")]
-        public FictionBookBody[] body {
-            get {
-                return this.bodyField;
-            }
-            set {
-                this.bodyField = value;
-            }
-        }
-    
+        public FictionBookBody[] body { get; set; }
+
         /// <remarks/>
         [XmlElement("binary")]
-        public FictionBookBinary[] binary {
-            get {
-                return this.binaryField;
-            }
-            set {
-                this.binaryField = value;
-            }
-        }
+        public FictionBookBinary[] binary { get; set; }
     }
 }

@@ -13,89 +13,26 @@ namespace fb2.Model.Description
     public class FictionBookDescriptionPublishinfo
     {
         /// <summary>
-        ///     The bookname field.
-        /// </summary>
-        private TextFieldType booknameField;
-
-        /// <summary>
-        ///     The city field.
-        /// </summary>
-        private TextFieldType cityField;
-
-        /// <summary>
-        ///     The isbn field.
-        /// </summary>
-        private TextFieldType isbnField;
-
-        /// <summary>
-        ///     The publisher field.
-        /// </summary>
-        private TextFieldType publisherField;
-
-        /// <summary>
-        ///     The sequence field.
-        /// </summary>
-        private SequenceType[] sequenceField;
-
-        /// <summary>
-        ///     The year field.
-        /// </summary>
-        private string yearField;
-
-        /// <summary>
         ///     The bookname.
         /// </summary>
         /// <remarks>
         /// </remarks>
         [XmlElement("book-name")]
-        public TextFieldType bookname
-        {
-            get
-            {
-                return this.booknameField;
-            }
-
-            set
-            {
-                this.booknameField = value;
-            }
-        }
+        public TextFieldType bookname { get; set; }
 
         /// <summary>
         ///     The publisher.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        public TextFieldType publisher
-        {
-            get
-            {
-                return this.publisherField;
-            }
-
-            set
-            {
-                this.publisherField = value;
-            }
-        }
+        public TextFieldType publisher { get; set; }
 
         /// <summary>
         ///     The city.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        public TextFieldType city
-        {
-            get
-            {
-                return this.cityField;
-            }
-
-            set
-            {
-                this.cityField = value;
-            }
-        }
+        public TextFieldType city { get; set; }
 
         /// <summary>
         ///     The year.
@@ -103,36 +40,14 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlElement(DataType = "gYear")]
-        public string year
-        {
-            get
-            {
-                return this.yearField;
-            }
-
-            set
-            {
-                this.yearField = value;
-            }
-        }
+        public string year { get; set; }
 
         /// <summary>
         ///     The isbn.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        public TextFieldType isbn
-        {
-            get
-            {
-                return this.isbnField;
-            }
-
-            set
-            {
-                this.isbnField = value;
-            }
-        }
+        public TextFieldType isbn { get; set; }
 
         /// <summary>
         ///     The sequence.
@@ -140,17 +55,6 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlElement("sequence")]
-        public SequenceType[] sequence
-        {
-            get
-            {
-                return this.sequenceField;
-            }
-
-            set
-            {
-                this.sequenceField = value;
-            }
-        }
+        public SequenceType[] sequence { get; set; }
     }
 }

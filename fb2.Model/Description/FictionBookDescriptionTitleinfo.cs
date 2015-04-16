@@ -14,78 +14,12 @@ namespace fb2.Model.Description
     public class FictionBookDescriptionTitleinfo
     {
         /// <summary>
-        ///     The annotation field.
-        /// </summary>
-        private AnnotationType annotationField;
-
-        /// <summary>
-        ///     The author field.
-        /// </summary>
-        private AuthorType[] authorField;
-
-        /// <summary>
-        ///     The booktitle field.
-        /// </summary>
-        private TextFieldType booktitleField;
-
-        /// <summary>
-        ///     The coverpage field.
-        /// </summary>
-        private ImageType[] coverpageField;
-
-        /// <summary>
-        ///     The date field.
-        /// </summary>
-        private DateType dateField;
-
-        /// <summary>
-        ///     The genre field.
-        /// </summary>
-        private FictionBookDescriptionTitleinfoGenre[] genreField;
-
-        /// <summary>
-        ///     The keywords field.
-        /// </summary>
-        private TextFieldType keywordsField;
-
-        /// <summary>
-        ///     The lang field.
-        /// </summary>
-        private string langField;
-
-        /// <summary>
-        ///     The sequence field.
-        /// </summary>
-        private SequenceType[] sequenceField;
-
-        /// <summary>
-        ///     The srclang field.
-        /// </summary>
-        private string srclangField;
-
-        /// <summary>
-        ///     The translator field.
-        /// </summary>
-        private AuthorType[] translatorField;
-
-        /// <summary>
         ///     The genre.
         /// </summary>
         /// <remarks>
         /// </remarks>
         [XmlElement("genre")]
-        public FictionBookDescriptionTitleinfoGenre[] genre
-        {
-            get
-            {
-                return this.genreField;
-            }
-
-            set
-            {
-                this.genreField = value;
-            }
-        }
+        public FictionBookDescriptionTitleinfoGenre[] genre { get; set; }
 
         /// <summary>
         ///     The author.
@@ -93,18 +27,7 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlElement("author")]
-        public AuthorType[] author
-        {
-            get
-            {
-                return this.authorField;
-            }
-
-            set
-            {
-                this.authorField = value;
-            }
-        }
+        public AuthorType[] author { get; set; }
 
         /// <summary>
         ///     The booktitle.
@@ -112,72 +35,28 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlElement("book-title")]
-        public TextFieldType booktitle
-        {
-            get
-            {
-                return this.booktitleField;
-            }
-
-            set
-            {
-                this.booktitleField = value;
-            }
-        }
+        public TextFieldType booktitle { get; set; }
 
         /// <summary>
         ///     The annotation.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        public AnnotationType annotation
-        {
-            get
-            {
-                return this.annotationField;
-            }
-
-            set
-            {
-                this.annotationField = value;
-            }
-        }
+        public AnnotationType annotation { get; set; }
 
         /// <summary>
         ///     The keywords.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        public TextFieldType keywords
-        {
-            get
-            {
-                return this.keywordsField;
-            }
-
-            set
-            {
-                this.keywordsField = value;
-            }
-        }
+        public TextFieldType keywords { get; set; }
 
         /// <summary>
         ///     The date.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        public DateType date
-        {
-            get
-            {
-                return this.dateField;
-            }
-
-            set
-            {
-                this.dateField = value;
-            }
-        }
+        public DateType date { get; set; }
 
         /// <summary>
         ///     The coverpage.
@@ -185,18 +64,7 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlArrayItem("image", IsNullable = false)]
-        public ImageType[] coverpage
-        {
-            get
-            {
-                return this.coverpageField;
-            }
-
-            set
-            {
-                this.coverpageField = value;
-            }
-        }
+        public ImageType[] coverpage { get; set; }
 
         /// <summary>
         ///     The lang.
@@ -204,18 +72,7 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlElement(DataType = "language")]
-        public string lang
-        {
-            get
-            {
-                return this.langField;
-            }
-
-            set
-            {
-                this.langField = value;
-            }
-        }
+        public string lang { get; set; }
 
         /// <summary>
         ///     The srclang.
@@ -223,18 +80,7 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlElement("src-lang", DataType = "language")]
-        public string srclang
-        {
-            get
-            {
-                return this.srclangField;
-            }
-
-            set
-            {
-                this.srclangField = value;
-            }
-        }
+        public string srclang { get; set; }
 
         /// <summary>
         ///     The translator.
@@ -242,18 +88,7 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlElement("translator")]
-        public AuthorType[] translator
-        {
-            get
-            {
-                return this.translatorField;
-            }
-
-            set
-            {
-                this.translatorField = value;
-            }
-        }
+        public AuthorType[] translator { get; set; }
 
         /// <summary>
         ///     The sequence.
@@ -261,17 +96,6 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlElement("sequence")]
-        public SequenceType[] sequence
-        {
-            get
-            {
-                return this.sequenceField;
-            }
-
-            set
-            {
-                this.sequenceField = value;
-            }
-        }
+        public SequenceType[] sequence { get; set; }
     }
 }

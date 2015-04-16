@@ -14,21 +14,11 @@ namespace fb2.Model.Data
     public class FictionBookDescriptionTitleinfoGenre : BaseTextData
     {
         /// <summary>
-        ///     The match field.
-        /// </summary>
-        private string matchField;
-
-        /// <summary>
-        ///     The value field.
-        /// </summary>
-        private string valueField;
-
-        /// <summary>
         ///     Initializes a new instance of the <see cref="FictionBookDescriptionTitleinfoGenre" /> class.
         /// </summary>
         public FictionBookDescriptionTitleinfoGenre()
         {
-            this.matchField = "100";
+            this.match = "100";
         }
 
         /// <summary>
@@ -38,18 +28,7 @@ namespace fb2.Model.Data
         /// </remarks>
         [XmlAttribute(DataType = "integer")]
         [DefaultValue("100")]
-        public string match
-        {
-            get
-            {
-                return this.matchField;
-            }
-
-            set
-            {
-                this.matchField = value;
-            }
-        }
+        public string match { get; set; }
 
         /// <summary>
         ///     The value.
@@ -57,17 +36,6 @@ namespace fb2.Model.Data
         /// <remarks>
         /// </remarks>
         [XmlText]
-        public override string Text
-        {
-            get
-            {
-                return this.valueField;
-            }
-
-            set
-            {
-                this.valueField = value;
-            }
-        }
+        public override string Text { get; set; }
     }
 }

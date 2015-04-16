@@ -13,27 +13,12 @@ namespace fb2.Model.Description
     public class FictionBookDescriptionCustominfo : TextFieldType
     {
         /// <summary>
-        ///     The infotype field.
+        /// The infotype.
         /// </summary>
-        private string infotypeField;
-
-        /// <summary>
-        ///     The infotype.
-        /// </summary>
-        /// <remarks>
-        /// </remarks>
+        /// <value>
+        /// The infotype.
+        /// </value>
         [XmlAttribute("info-type")]
-        public string infotype
-        {
-            get
-            {
-                return this.infotypeField;
-            }
-
-            set
-            {
-                this.infotypeField = value;
-            }
-        }
+        public string infotype { get; set; }
     }
 }

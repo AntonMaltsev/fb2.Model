@@ -11,38 +11,12 @@ namespace fb2.Model.Data
     public class FictionBookBinary
     {
         /// <summary>
-        ///     The contenttype field.
-        /// </summary>
-        private string contenttypeField;
-
-        /// <summary>
-        ///     The id field.
-        /// </summary>
-        private string idField;
-
-        /// <summary>
-        ///     The value field.
-        /// </summary>
-        private byte[] valueField;
-
-        /// <summary>
         ///     The contenttype.
         /// </summary>
         /// <remarks>
         /// </remarks>
         [XmlAttribute("content-type")]
-        public string contenttype
-        {
-            get
-            {
-                return this.contenttypeField;
-            }
-
-            set
-            {
-                this.contenttypeField = value;
-            }
-        }
+        public string contenttype { get; set; }
 
         /// <summary>
         ///     The id.
@@ -50,18 +24,7 @@ namespace fb2.Model.Data
         /// <remarks>
         /// </remarks>
         [XmlAttribute(DataType = "ID")]
-        public string id
-        {
-            get
-            {
-                return this.idField;
-            }
-
-            set
-            {
-                this.idField = value;
-            }
-        }
+        public string id { get; set; }
 
         /// <summary>
         ///     The value.
@@ -69,17 +32,6 @@ namespace fb2.Model.Data
         /// <remarks>
         /// </remarks>
         [XmlText(DataType = "base64Binary")]
-        public byte[] Value
-        {
-            get
-            {
-                return this.valueField;
-            }
-
-            set
-            {
-                this.valueField = value;
-            }
-        }
+        public byte[] Value { get; set; }
     }
 }

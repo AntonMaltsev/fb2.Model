@@ -14,52 +14,20 @@ namespace fb2.Model.Data
     public class TextFieldType : BaseTextData
     {
         /// <summary>
-        ///     The lang field.
-        /// </summary>
-        private string langField;
-
-        /// <summary>
-        ///     The value field.
-        /// </summary>
-        private string valueField;
-
-        /// <summary>
         ///     The lang.
         /// </summary>
         /// <remarks>
         /// </remarks>
         [XmlAttribute(Form = XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/XML/1998/namespace")]
-        public string lang
-        {
-            get
-            {
-                return this.langField;
-            }
-
-            set
-            {
-                this.langField = value;
-            }
-        }
+        public string lang { get; set; }
 
         /// <summary>
-        /// The value.
+        ///     The value.
         /// </summary>
         /// <value>
-        /// The Value.
+        ///     The Value.
         /// </value>
         [XmlText]
-        public override string Text
-        {
-            get
-            {
-                return this.valueField;
-            }
-
-            set
-            {
-                this.valueField = value;
-            }
-        }
+        public override string Text { get; set; }
     }
 }

@@ -14,33 +14,18 @@ namespace fb2.Model.Data
     public class ImageType : BaseTextData
     {
         /// <summary>
-        ///     The alt field.
-        /// </summary>
-        private string altField;
-
-        /// <summary>
-        ///     The href field.
-        /// </summary>
-        private string hrefField;
-
-        /// <summary>
-        ///     The type field.
-        /// </summary>
-        private string typeField;
-
-        /// <summary>
         ///     Initializes a new instance of the <see cref="ImageType" /> class.
         /// </summary>
         public ImageType()
         {
-            this.typeField = "simple";
+            this.type = "simple";
         }
 
         /// <summary>
-        /// Gets or sets the content.
+        ///     Gets or sets the content.
         /// </summary>
         /// <value>
-        /// The content.
+        ///     The content.
         /// </value>
         [XmlIgnore]
         public override string Text
@@ -49,6 +34,7 @@ namespace fb2.Model.Data
             {
                 return this.type;
             }
+
             set
             {
                 this.type = value;
@@ -56,24 +42,13 @@ namespace fb2.Model.Data
         }
 
         /// <summary>
-        /// The type.
+        ///     The type.
         /// </summary>
         /// <value>
-        /// The type.
+        ///     The type.
         /// </value>
         [XmlAttribute(Form = XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/1999/xlink")]
-        public string type
-        {
-            get
-            {
-                return this.typeField;
-            }
-
-            set
-            {
-                this.typeField = value;
-            }
-        }
+        public string type { get; set; }
 
         /// <summary>
         ///     The href.
@@ -81,18 +56,7 @@ namespace fb2.Model.Data
         /// <remarks>
         /// </remarks>
         [XmlAttribute(Form = XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/1999/xlink")]
-        public string href
-        {
-            get
-            {
-                return this.hrefField;
-            }
-
-            set
-            {
-                this.hrefField = value;
-            }
-        }
+        public string href { get; set; }
 
         /// <summary>
         ///     The alt.
@@ -100,17 +64,6 @@ namespace fb2.Model.Data
         /// <remarks>
         /// </remarks>
         [XmlAttribute]
-        public string alt
-        {
-            get
-            {
-                return this.altField;
-            }
-
-            set
-            {
-                this.altField = value;
-            }
-        }
+        public string alt { get; set; }
     }
 }

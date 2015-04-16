@@ -13,52 +13,20 @@ namespace fb2.Model
     public class FictionBookStylesheet : BaseTextData
     {
         /// <summary>
-        ///     The type field.
-        /// </summary>
-        private string typeField;
-
-        /// <summary>
-        ///     The value field.
-        /// </summary>
-        private string valueField;
-
-        /// <summary>
         ///     The type.
         /// </summary>
         /// <remarks>
         /// </remarks>
         [XmlAttribute]
-        public string type
-        {
-            get
-            {
-                return this.typeField;
-            }
-
-            set
-            {
-                this.typeField = value;
-            }
-        }
+        public string type { get; set; }
 
         /// <summary>
-        /// The value.
+        ///     The value.
         /// </summary>
         /// <value>
-        /// The value.
+        ///     The value.
         /// </value>
         [XmlText]
-        public override string Text
-        {
-            get
-            {
-                return this.valueField;
-            }
-
-            set
-            {
-                this.valueField = value;
-            }
-        }
+        public override string Text { get; set; }
     }
 }

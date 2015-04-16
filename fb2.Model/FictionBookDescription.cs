@@ -13,43 +13,12 @@ namespace fb2.Model
     public class FictionBookDescription
     {
         /// <summary>
-        ///     The custominfo field.
-        /// </summary>
-        private FictionBookDescriptionCustominfo[] custominfoField;
-
-        /// <summary>
-        ///     The documentinfo field.
-        /// </summary>
-        private FictionBookDescriptionDocumentinfo documentinfoField;
-
-        /// <summary>
-        ///     The publishinfo field.
-        /// </summary>
-        private FictionBookDescriptionPublishinfo publishinfoField;
-
-        /// <summary>
-        ///     The titleinfo field.
-        /// </summary>
-        private FictionBookDescriptionTitleinfo titleinfoField;
-
-        /// <summary>
         ///     The titleinfo.
         /// </summary>
         /// <remarks>
         /// </remarks>
         [XmlElement("title-info")]
-        public FictionBookDescriptionTitleinfo titleinfo
-        {
-            get
-            {
-                return this.titleinfoField;
-            }
-
-            set
-            {
-                this.titleinfoField = value;
-            }
-        }
+        public FictionBookDescriptionTitleinfo titleinfo { get; set; }
 
         /// <summary>
         ///     The documentinfo.
@@ -57,18 +26,7 @@ namespace fb2.Model
         /// <remarks>
         /// </remarks>
         [XmlElement("document-info")]
-        public FictionBookDescriptionDocumentinfo documentinfo
-        {
-            get
-            {
-                return this.documentinfoField;
-            }
-
-            set
-            {
-                this.documentinfoField = value;
-            }
-        }
+        public FictionBookDescriptionDocumentinfo documentinfo { get; set; }
 
         /// <summary>
         ///     The publishinfo.
@@ -76,18 +34,7 @@ namespace fb2.Model
         /// <remarks>
         /// </remarks>
         [XmlElement("publish-info")]
-        public FictionBookDescriptionPublishinfo publishinfo
-        {
-            get
-            {
-                return this.publishinfoField;
-            }
-
-            set
-            {
-                this.publishinfoField = value;
-            }
-        }
+        public FictionBookDescriptionPublishinfo publishinfo { get; set; }
 
         /// <summary>
         ///     The custominfo.
@@ -95,17 +42,6 @@ namespace fb2.Model
         /// <remarks>
         /// </remarks>
         [XmlElement("custom-info")]
-        public FictionBookDescriptionCustominfo[] custominfo
-        {
-            get
-            {
-                return this.custominfoField;
-            }
-
-            set
-            {
-                this.custominfoField = value;
-            }
-        }
+        public FictionBookDescriptionCustominfo[] custominfo { get; set; }
     }
 }

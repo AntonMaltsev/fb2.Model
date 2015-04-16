@@ -15,43 +15,12 @@ namespace fb2.Model.Data
     public class DateType : BaseTextData
     {
         /// <summary>
-        ///     The lang field.
-        /// </summary>
-        private string langField;
-
-        /// <summary>
-        ///     The value field.
-        /// </summary>
-        private DateTime valueField;
-
-        /// <summary>
-        ///     The value field 1.
-        /// </summary>
-        private string valueField1;
-
-        /// <summary>
-        ///     The value field specified.
-        /// </summary>
-        private bool valueFieldSpecified;
-
-        /// <summary>
         ///     The value.
         /// </summary>
         /// <remarks>
         /// </remarks>
         [XmlAttribute(DataType = "date")]
-        public DateTime value
-        {
-            get
-            {
-                return this.valueField;
-            }
-
-            set
-            {
-                this.valueField = value;
-            }
-        }
+        public DateTime value { get; set; }
 
         /// <summary>
         ///     The value specified.
@@ -59,57 +28,24 @@ namespace fb2.Model.Data
         /// <remarks>
         /// </remarks>
         [XmlIgnore]
-        public bool valueSpecified
-        {
-            get
-            {
-                return this.valueFieldSpecified;
-            }
-
-            set
-            {
-                this.valueFieldSpecified = value;
-            }
-        }
+        public bool valueSpecified { get; set; }
 
         /// <summary>
-        /// The lang.
+        ///     The lang.
         /// </summary>
         /// <value>
-        /// The language.
+        ///     The language.
         /// </value>
         [XmlAttribute(Form = XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/XML/1998/namespace")]
-        public string lang
-        {
-            get
-            {
-                return this.langField;
-            }
-
-            set
-            {
-                this.langField = value;
-            }
-        }
+        public string lang { get; set; }
 
         /// <summary>
-        /// The value.
+        ///     The value.
         /// </summary>
         /// <value>
-        /// The content.
+        ///     The content.
         /// </value>
         [XmlText]
-        public override string Text
-        {
-            get
-            {
-                return this.valueField1;
-            }
-
-            set
-            {
-                this.valueField1 = value;
-            }
-        }
+        public override string Text { get; set; }
     }
 }

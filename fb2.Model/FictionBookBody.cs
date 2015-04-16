@@ -15,16 +15,6 @@ namespace fb2.Model
     public class FictionBookBody
     {
         /// <summary>
-        ///     The epigraph field.
-        /// </summary>
-        private EpigraphType[] epigraphField;
-
-        /// <summary>
-        ///     The image field.
-        /// </summary>
-        private ImageType imageField;
-
-        /// <summary>
         ///     The lang field.
         /// </summary>
         private string langField;
@@ -35,50 +25,19 @@ namespace fb2.Model
         private string nameField;
 
         /// <summary>
-        ///     The section field.
-        /// </summary>
-        private SectionType[] sectionField;
-
-        /// <summary>
-        ///     The title field.
-        /// </summary>
-        private TitleType titleField;
-
-        /// <summary>
         ///     The image.
         /// </summary>
-        /// <remarks>
-        /// </remarks>
-        public ImageType image
-        {
-            get
-            {
-                return this.imageField;
-            }
-
-            set
-            {
-                this.imageField = value;
-            }
-        }
+        /// <value>
+        ///     The image.
+        /// </value>
+        public ImageType image { get; set; }
 
         /// <summary>
         ///     The title.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        public TitleType title
-        {
-            get
-            {
-                return this.titleField;
-            }
-
-            set
-            {
-                this.titleField = value;
-            }
-        }
+        public TitleType title { get; set; }
 
         /// <summary>
         ///     The epigraph.
@@ -86,18 +45,7 @@ namespace fb2.Model
         /// <remarks>
         /// </remarks>
         [XmlElement("epigraph")]
-        public EpigraphType[] epigraph
-        {
-            get
-            {
-                return this.epigraphField;
-            }
-
-            set
-            {
-                this.epigraphField = value;
-            }
-        }
+        public EpigraphType[] epigraph { get; set; }
 
         /// <summary>
         ///     The section.
@@ -105,18 +53,7 @@ namespace fb2.Model
         /// <remarks>
         /// </remarks>
         [XmlElement("section")]
-        public SectionType[] section
-        {
-            get
-            {
-                return this.sectionField;
-            }
-
-            set
-            {
-                this.sectionField = value;
-            }
-        }
+        public SectionType[] section { get; set; }
 
         /// <summary>
         ///     The name.

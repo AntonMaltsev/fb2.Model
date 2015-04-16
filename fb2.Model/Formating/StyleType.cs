@@ -61,10 +61,10 @@ namespace fb2.Model.Formating
         }
 
         /// <summary>
-        /// The items element name.
+        ///     The items element name.
         /// </summary>
         /// <value>
-        /// The name of the items element.
+        ///     The name of the items element.
         /// </value>
         [XmlElement("ItemsElementName")]
         [XmlIgnore]

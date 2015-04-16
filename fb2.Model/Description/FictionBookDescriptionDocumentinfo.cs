@@ -14,63 +14,12 @@ namespace fb2.Model.Description
     public class FictionBookDescriptionDocumentinfo
     {
         /// <summary>
-        ///     The author field.
-        /// </summary>
-        private AuthorType[] authorField;
-
-        /// <summary>
-        ///     The date field.
-        /// </summary>
-        private DateType dateField;
-
-        /// <summary>
-        ///     The history field.
-        /// </summary>
-        private AnnotationType historyField;
-
-        /// <summary>
-        ///     The id field.
-        /// </summary>
-        private string idField;
-
-        /// <summary>
-        ///     The programused field.
-        /// </summary>
-        private TextFieldType programusedField;
-
-        /// <summary>
-        ///     The srcocr field.
-        /// </summary>
-        private TextFieldType srcocrField;
-
-        /// <summary>
-        ///     The srcurl field.
-        /// </summary>
-        private string[] srcurlField;
-
-        /// <summary>
-        ///     The version field.
-        /// </summary>
-        private float versionField;
-
-        /// <summary>
         ///     The author.
         /// </summary>
         /// <remarks>
         /// </remarks>
         [XmlElement("author")]
-        public AuthorType[] author
-        {
-            get
-            {
-                return this.authorField;
-            }
-
-            set
-            {
-                this.authorField = value;
-            }
-        }
+        public AuthorType[] author { get; set; }
 
         /// <summary>
         ///     The programused.
@@ -78,36 +27,14 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlElement("program-used")]
-        public TextFieldType programused
-        {
-            get
-            {
-                return this.programusedField;
-            }
-
-            set
-            {
-                this.programusedField = value;
-            }
-        }
+        public TextFieldType programused { get; set; }
 
         /// <summary>
         ///     The date.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        public DateType date
-        {
-            get
-            {
-                return this.dateField;
-            }
-
-            set
-            {
-                this.dateField = value;
-            }
-        }
+        public DateType date { get; set; }
 
         /// <summary>
         ///     The srcurl.
@@ -115,18 +42,7 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlElement("src-url")]
-        public string[] srcurl
-        {
-            get
-            {
-                return this.srcurlField;
-            }
-
-            set
-            {
-                this.srcurlField = value;
-            }
-        }
+        public string[] srcurl { get; set; }
 
         /// <summary>
         ///     The srcocr.
@@ -134,18 +50,7 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlElement("src-ocr")]
-        public TextFieldType srcocr
-        {
-            get
-            {
-                return this.srcocrField;
-            }
-
-            set
-            {
-                this.srcocrField = value;
-            }
-        }
+        public TextFieldType srcocr { get; set; }
 
         /// <summary>
         ///     The id.
@@ -153,53 +58,20 @@ namespace fb2.Model.Description
         /// <remarks>
         /// </remarks>
         [XmlElement(DataType = "token")]
-        public string id
-        {
-            get
-            {
-                return this.idField;
-            }
-
-            set
-            {
-                this.idField = value;
-            }
-        }
+        public string id { get; set; }
 
         /// <summary>
         ///     The version.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        public float version
-        {
-            get
-            {
-                return this.versionField;
-            }
-
-            set
-            {
-                this.versionField = value;
-            }
-        }
+        public float version { get; set; }
 
         /// <summary>
         ///     The history.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        public AnnotationType history
-        {
-            get
-            {
-                return this.historyField;
-            }
-
-            set
-            {
-                this.historyField = value;
-            }
-        }
+        public AnnotationType history { get; set; }
     }
 }

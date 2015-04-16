@@ -12,43 +12,12 @@ namespace fb2.Model.Data
     public class SequenceType
     {
         /// <summary>
-        ///     The lang field.
-        /// </summary>
-        private string langField;
-
-        /// <summary>
-        ///     The name field.
-        /// </summary>
-        private string nameField;
-
-        /// <summary>
-        ///     The number field.
-        /// </summary>
-        private string numberField;
-
-        /// <summary>
-        ///     The sequence field.
-        /// </summary>
-        private SequenceType[] sequenceField;
-
-        /// <summary>
         ///     The sequence.
         /// </summary>
         /// <remarks>
         /// </remarks>
         [XmlElement("sequence")]
-        public SequenceType[] sequence
-        {
-            get
-            {
-                return this.sequenceField;
-            }
-
-            set
-            {
-                this.sequenceField = value;
-            }
-        }
+        public SequenceType[] sequence { get; set; }
 
         /// <summary>
         ///     The name.
@@ -56,18 +25,7 @@ namespace fb2.Model.Data
         /// <remarks>
         /// </remarks>
         [XmlAttribute]
-        public string name
-        {
-            get
-            {
-                return this.nameField;
-            }
-
-            set
-            {
-                this.nameField = value;
-            }
-        }
+        public string name { get; set; }
 
         /// <summary>
         ///     The number.
@@ -75,18 +33,7 @@ namespace fb2.Model.Data
         /// <remarks>
         /// </remarks>
         [XmlAttribute(DataType = "integer")]
-        public string number
-        {
-            get
-            {
-                return this.numberField;
-            }
-
-            set
-            {
-                this.numberField = value;
-            }
-        }
+        public string number { get; set; }
 
         /// <summary>
         ///     The lang.
@@ -94,17 +41,6 @@ namespace fb2.Model.Data
         /// <remarks>
         /// </remarks>
         [XmlAttribute(Form = XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/XML/1998/namespace")]
-        public string lang
-        {
-            get
-            {
-                return this.langField;
-            }
-
-            set
-            {
-                this.langField = value;
-            }
-        }
+        public string lang { get; set; }
     }
 }

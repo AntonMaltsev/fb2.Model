@@ -2,21 +2,42 @@
 {
     using System;
     using System.IO;
-    using System.Runtime.InteropServices.ComTypes;
     using System.Xml;
     using System.Xml.Serialization;
 
     using fb2.Model;
 
-    class Program
+    /// <summary>
+    /// The program.
+    /// </summary>
+    internal class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The main.
+        /// </summary>
+        /// <param name="args">
+        /// The args.
+        /// </param>
+        private static void Main(string[] args)
         {
-            var book = Deserialize<FictionBook>(@"C:\Users\fenri_000\Desktop\Игры\ФБ\Kamenistyiyi_A._Rayibesposhadnyiyi1._Rayi_Besposhadnyiyi.fb2");
+            var book =
+                Deserialize<FictionBook>(
+                    @"C:\Users\fenri_000\Desktop\Игры\ФБ\Kamenistyiyi_A._Rayibesposhadnyiyi1._Rayi_Besposhadnyiyi.fb2");
             Console.WriteLine(book.description.titleinfo.booktitle.Value);
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// The deserialize.
+        /// </summary>
+        /// <param name="filePath">
+        /// The file path.
+        /// </param>
+        /// <typeparam name="T">
+        /// </typeparam>
+        /// <returns>
+        /// The <see cref="T"/>.
+        /// </returns>
         public static T Deserialize<T>(string filePath)
         {
             if (!File.Exists(filePath))
@@ -29,8 +50,8 @@
             {
                 var settings = new XmlReaderSettings
                                    {
-                                       CheckCharacters = true,
-                                       IgnoreComments = true,
+                                       CheckCharacters = true, 
+                                       IgnoreComments = true, 
                                        IgnoreWhitespace = true
                                    };
                 using (var reader = XmlReader.Create(stream, settings))
@@ -39,8 +60,6 @@
                     return result;
                 }
             }
-
-            return default(T);
         }
     }
 }

@@ -2,6 +2,7 @@ namespace fb2.Model.Types.Formating
 {
     using System.Xml.Serialization;
 
+    using fb2.Model.Types.Base;
     using fb2.Model.Types.Enum;
 
     /// <summary>
@@ -10,12 +11,12 @@ namespace fb2.Model.Types.Formating
     /// <remarks>
     /// </remarks>
     [XmlType(Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0")]
-    public class StyleLinkType
+    public class StyleLinkType : BaseFormatingStyle
     {
         /// <summary>
         ///     The items element name field.
         /// </summary>
-        private ItemsChoiceType1[] itemsElementNameField;
+        private StyleLinkSupportedEnum[] itemsElementNameField;
 
         /// <summary>
         ///     The items field.
@@ -56,7 +57,7 @@ namespace fb2.Model.Types.Formating
         /// </remarks>
         [XmlElement("ItemsElementName")]
         [XmlIgnore]
-        public ItemsChoiceType1[] ItemsElementName
+        public StyleLinkSupportedEnum[] ItemsElementName
         {
             get
             {

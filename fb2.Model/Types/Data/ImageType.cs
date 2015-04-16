@@ -3,13 +3,15 @@ namespace fb2.Model.Types.Data
     using System.Xml.Schema;
     using System.Xml.Serialization;
 
+    using fb2.Model.Types.Base;
+
     /// <summary>
     ///     The image type.
     /// </summary>
     /// <remarks>
     /// </remarks>
     [XmlType(Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0")]
-    public class ImageType
+    public class ImageType : BaseTextData
     {
         /// <summary>
         ///     The alt field.
@@ -35,10 +37,30 @@ namespace fb2.Model.Types.Data
         }
 
         /// <summary>
-        ///     The type.
+        /// Gets or sets the content.
         /// </summary>
-        /// <remarks>
-        /// </remarks>
+        /// <value>
+        /// The content.
+        /// </value>
+        [XmlIgnore]
+        public override string Text
+        {
+            get
+            {
+                return this.type;
+            }
+            set
+            {
+                this.type = value;
+            }
+        }
+
+        /// <summary>
+        /// The type.
+        /// </summary>
+        /// <value>
+        /// The type.
+        /// </value>
         [XmlAttribute(Form = XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/1999/xlink")]
         public string type
         {

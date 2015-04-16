@@ -3,6 +3,7 @@ namespace fb2.Model.Types.Formating
     using System.Xml.Schema;
     using System.Xml.Serialization;
 
+    using fb2.Model.Types.Base;
     using fb2.Model.Types.Data;
 
     /// <summary>
@@ -11,7 +12,7 @@ namespace fb2.Model.Types.Formating
     /// <remarks>
     /// </remarks>
     [XmlType(Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0")]
-    public class PoemType
+    public class PoemType : BaseFormatingStyle
     {
         /// <summary>
         ///     The date field.

@@ -3,13 +3,15 @@ namespace fb2.Model.Types.Data
     using System.Xml.Schema;
     using System.Xml.Serialization;
 
+    using fb2.Model.Types.Base;
+
     /// <summary>
     ///     The text field type.
     /// </summary>
     /// <remarks>
     /// </remarks>
     [XmlType(Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0")]
-    public class TextFieldType
+    public class TextFieldType : BaseTextData
     {
         /// <summary>
         ///     The lang field.
@@ -41,12 +43,13 @@ namespace fb2.Model.Types.Data
         }
 
         /// <summary>
-        ///     The value.
+        /// The value.
         /// </summary>
-        /// <remarks>
-        /// </remarks>
+        /// <value>
+        /// The Value.
+        /// </value>
         [XmlText]
-        public string Value
+        public override string Text
         {
             get
             {

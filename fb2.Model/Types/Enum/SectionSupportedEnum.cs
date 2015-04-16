@@ -3,26 +3,27 @@ namespace fb2.Model.Types.Enum
     using System.Xml.Serialization;
 
     /// <summary>
-    ///     The items choice type 3.
+    ///     The items choice type 5.
     /// </summary>
     /// <remarks>
     /// </remarks>
     [XmlType(Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0", IncludeInSchema = false)]
-    public enum ItemsChoiceType3
+    public enum SectionSupportedEnum
     {
         /// <summary>
-        ///     The a.
+        ///     The cite.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        a, 
+        cite, 
 
         /// <summary>
-        ///     The emphasis.
+        ///     The emptyline.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        emphasis, 
+        [XmlEnum("empty-line")]
+        emptyline, 
 
         /// <summary>
         ///     The image.
@@ -32,17 +33,38 @@ namespace fb2.Model.Types.Enum
         image, 
 
         /// <summary>
-        ///     The strong.
+        ///     The p.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        strong, 
+        p, 
 
         /// <summary>
-        ///     The style.
+        ///     The poem.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        style
+        poem, 
+
+        /// <summary>
+        ///     The section.
+        /// </summary>
+        /// <remarks>
+        /// </remarks>
+        section, 
+
+        /// <summary>
+        ///     The subtitle.
+        /// </summary>
+        /// <remarks>
+        /// </remarks>
+        subtitle, 
+
+        /// <summary>
+        ///     The table.
+        /// </summary>
+        /// <remarks>
+        /// </remarks>
+        table
     }
 }

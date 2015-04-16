@@ -3,6 +3,7 @@ namespace fb2.Model.Types
     using System.Diagnostics;
     using System.Xml.Serialization;
 
+    using fb2.Model.Types.Base;
     using fb2.Model.Types.Data;
     using fb2.Model.Types.Enum;
 
@@ -18,26 +19,26 @@ namespace fb2.Model.Types
         /// <summary>
         ///     The items element name field.
         /// </summary>
-        private ItemsChoiceType[] itemsElementNameField;
+        private AuthorSupportedEnum[] itemsElementNameField;
 
         /// <summary>
         ///     The items field.
         /// </summary>
-        private object[] itemsField;
+        private BaseTextData[] itemsField;
 
         /// <summary>
         ///     The items.
         /// </summary>
         /// <remarks>
         /// </remarks>
-        [XmlElement("email", typeof(string))]
+        [XmlElement("email", typeof(BaseTextData))]
         [XmlElement("first-name", typeof(TextFieldType))]
-        [XmlElement("home-page", typeof(string))]
+        [XmlElement("home-page", typeof(BaseTextData))]
         [XmlElement("last-name", typeof(TextFieldType))]
         [XmlElement("middle-name", typeof(TextFieldType))]
         [XmlElement("nickname", typeof(TextFieldType))]
         [XmlChoiceIdentifier("ItemsElementName")]
-        public object[] Items
+        public BaseTextData[] Items
         {
             get
             {
@@ -57,7 +58,7 @@ namespace fb2.Model.Types
         /// </remarks>
         [XmlElement("ItemsElementName")]
         [XmlIgnore]
-        public ItemsChoiceType[] ItemsElementName
+        public AuthorSupportedEnum[] ItemsElementName
         {
             get
             {

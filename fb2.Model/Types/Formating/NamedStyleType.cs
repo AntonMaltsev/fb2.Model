@@ -3,6 +3,7 @@ namespace fb2.Model.Types.Formating
     using System.Xml.Schema;
     using System.Xml.Serialization;
 
+    using fb2.Model.Types.Base;
     using fb2.Model.Types.Data;
     using fb2.Model.Types.Enum;
 
@@ -12,17 +13,17 @@ namespace fb2.Model.Types.Formating
     /// <remarks>
     /// </remarks>
     [XmlType(Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0")]
-    public class NamedStyleType
+    public class NamedStyleType : BaseFormatingStyle
     {
         /// <summary>
         ///     The items element name field.
         /// </summary>
-        private ItemsChoiceType3[] itemsElementNameField;
+        private StyleSupportedEnum[] itemsElementNameField;
 
         /// <summary>
         ///     The items field.
         /// </summary>
-        private object[] itemsField;
+        private BaseFormatingStyle[] itemsField;
 
         /// <summary>
         ///     The lang field.
@@ -37,7 +38,7 @@ namespace fb2.Model.Types.Formating
         /// <summary>
         ///     The text field.
         /// </summary>
-        private string[] textField;
+        private string textField;
 
         /// <summary>
         ///     The items.
@@ -50,7 +51,7 @@ namespace fb2.Model.Types.Formating
         [XmlElement("strong", typeof(StyleType))]
         [XmlElement("style", typeof(NamedStyleType))]
         [XmlChoiceIdentifier("ItemsElementName")]
-        public object[] Items
+        public BaseFormatingStyle[] Items
         {
             get
             {
@@ -70,7 +71,7 @@ namespace fb2.Model.Types.Formating
         /// </remarks>
         [XmlElement("ItemsElementName")]
         [XmlIgnore]
-        public ItemsChoiceType3[] ItemsElementName
+        public StyleSupportedEnum[] ItemsElementName
         {
             get
             {
@@ -89,7 +90,7 @@ namespace fb2.Model.Types.Formating
         /// <remarks>
         /// </remarks>
         [XmlText]
-        public string[] Text
+        public string Text
         {
             get
             {

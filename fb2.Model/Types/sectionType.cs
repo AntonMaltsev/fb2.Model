@@ -38,7 +38,7 @@ namespace fb2.Model.Types
         /// <summary>
         ///     The items element name field.
         /// </summary>
-        private ItemsChoiceType5[] itemsElementNameField;
+        private SectionSupportedEnum[] itemsElementNameField;
 
         /// <summary>
         ///     The items field.
@@ -165,7 +165,7 @@ namespace fb2.Model.Types
         /// </remarks>
         [XmlElement("ItemsElementName", Order = 5)]
         [XmlIgnore]
-        public ItemsChoiceType5[] ItemsElementName
+        public SectionSupportedEnum[] ItemsElementName
         {
             get
             {

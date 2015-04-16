@@ -37,6 +37,8 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Types\Base\BaseTextData.cs" />
+    <Compile Include="Types\Base\BaseFormatingStyle.cs" />
     <Compile Include="Types\Enum\AlignType.cs" />
     <Compile Include="Types\AnnotationType.cs" />
     <Compile Include="Types\AuthorType.cs" />
@@ -54,12 +56,10 @@
     <Compile Include="FictionBookStylesheet.cs" />
     <Compile Include="Types\Enum\GenreType.cs" />
     <Compile Include="Types\Data\ImageType.cs" />
-    <Compile Include="Types\Enum\ItemsChoiceType.cs" />
-    <Compile Include="Types\Enum\ItemsChoiceType1.cs" />
-    <Compile Include="Types\Enum\ItemsChoiceType2.cs" />
-    <Compile Include="Types\Enum\ItemsChoiceType3.cs" />
-    <Compile Include="Types\Enum\ItemsChoiceType4.cs" />
-    <Compile Include="Types\Enum\ItemsChoiceType5.cs" />
+    <Compile Include="Types\Enum\AuthorSupportedEnum.cs" />
+    <Compile Include="Types\Enum\StyleLinkSupportedEnum.cs" />
+    <Compile Include="Types\Enum\StyleSupportedEnum.cs" />
+    <Compile Include="Types\Enum\SectionSupportedEnum.cs" />
     <Compile Include="Types\Formating\LinkType.cs" />
     <Compile Include="Types\Formating\NamedStyleType.cs" />
     <Compile Include="FictionBook.cs" />

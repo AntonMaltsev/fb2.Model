@@ -8,7 +8,7 @@ namespace fb2.Model.Types.Enum
     /// <remarks>
     /// </remarks>
     [XmlType(Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0", IncludeInSchema = false)]
-    public enum ItemsChoiceType
+    public enum AuthorSupportedEnum
     {
         /// <summary>
         ///     The email.

@@ -2,6 +2,7 @@ namespace fb2.Model.Types
 {
     using System.Xml.Serialization;
 
+    using fb2.Model.Types.Base;
     using fb2.Model.Types.Data;
     using fb2.Model.Types.Formating;
 
@@ -21,7 +22,7 @@ namespace fb2.Model.Types
         /// <summary>
         ///     The items field.
         /// </summary>
-        private object[] itemsField;
+        private BaseFormatingStyle[] itemsField;
 
         /// <summary>
         ///     The textauthor field.
@@ -34,10 +35,10 @@ namespace fb2.Model.Types
         /// <remarks>
         /// </remarks>
         [XmlElement("cite", typeof(CiteType))]
-        [XmlElement("empty-line", typeof(object))]
+        [XmlElement("empty-line", typeof(BaseFormatingStyle))]
         [XmlElement("p", typeof(PType))]
         [XmlElement("poem", typeof(PoemType))]
-        public object[] Items
+        public BaseFormatingStyle[] Items
         {
             get
             {

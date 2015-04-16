@@ -3,6 +3,7 @@ namespace fb2.Model.Types.Formating
     using System.Xml.Schema;
     using System.Xml.Serialization;
 
+    using fb2.Model.Types.Base;
     using fb2.Model.Types.Data;
 
     /// <summary>
@@ -11,7 +12,7 @@ namespace fb2.Model.Types.Formating
     /// <remarks>
     /// </remarks>
     [XmlType(Namespace = "http://www.gribuser.ru/xml/fictionbook/2.0")]
-    public class CiteType
+    public class CiteType : BaseFormatingStyle
     {
         /// <summary>
         ///     The id field.
@@ -21,7 +22,7 @@ namespace fb2.Model.Types.Formating
         /// <summary>
         ///     The items field.
         /// </summary>
-        private object[] itemsField;
+        private BaseFormatingStyle[] itemsField;
 
         /// <summary>
         ///     The lang field.
@@ -38,10 +39,10 @@ namespace fb2.Model.Types.Formating
         /// </summary>
         /// <remarks>
         /// </remarks>
-        [XmlElement("empty-line", typeof(object))]
+        [XmlElement("empty-line", typeof(BaseFormatingStyle))]
         [XmlElement("p", typeof(PType))]
         [XmlElement("poem", typeof(PoemType))]
-        public object[] Items
+        public BaseFormatingStyle[] Items
         {
             get
             {

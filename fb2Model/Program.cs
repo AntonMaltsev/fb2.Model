@@ -121,7 +121,7 @@
         {
             if (!File.Exists(filePath))
             {
-                Console.WriteLine("Shit happened. Selected file not found.");
+                Console.WriteLine("Oops. Selected file not found.");
             }
 
             var xmlSerializer = new XmlSerializer(typeof(T));
